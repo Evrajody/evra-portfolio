@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shanti&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+	font-family: YesChirp;
+	font-weight: 400;
+	src: url("https://abs.twimg.com/fonts/v2/chirp-regular-web.woff") format("woff");
+}
+
+@font-face {
+	font-family: YesChirp;
+	font-weight: 500;
+	src: url("https://abs.twimg.com/fonts/v2/chirp-medium-web.woff") format("woff");
+}
+
+@font-face {
+	font-family: YesChirp;
+	font-weight: 700;
+	src: url("https://abs.twimg.com/fonts/v2/chirp-bold-web.woff") format("woff");
+}
+
+@font-face {
+	font-family: YesChirp;
+	font-weight: 800;
+	src: url("https://abs.twimg.com/fonts/v2/chirp-heavy-web.woff") format("woff");
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'YesChirp', -apple-system, sans-serif;
+}
+
+
+.hamburger {
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+}
+
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  transition: all 0.5s;
+  transform: rotate(0);
+
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
